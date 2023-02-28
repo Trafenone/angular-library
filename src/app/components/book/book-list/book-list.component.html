@@ -1,0 +1,10 @@
+<button class="border-2 py-2 px-8 ml-2" (click)="loadAll()">All</button>
+<button class="border-2 py-2 px-4" (click)="loadRecommended()">Recommended</button>
+
+<div class="border-2 p-5 flex flex-wrap justify-around overflow-y-scroll h-80">
+  <app-book-list-item
+    *ngFor="let book of data$ | async" [book]="book"
+    (onClickShow)="showBook($event)"
+    (onClickEdit)="editBook($event)"
+  ></app-book-list-item>
+</div>

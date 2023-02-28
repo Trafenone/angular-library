@@ -1,0 +1,3 @@
+<app-edit-book (onUpdate)="updateList()"></app-edit-book>
+<app-book-list (onClickShow)="onClickShow($event)" (onClickEdit)="onClickEdit($event)"></app-book-list>
+<app-view-book [id]="idModal" *ngIf="showModal" (closeModal)="this.showModal = false"></app-view-book>
